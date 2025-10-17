@@ -1,0 +1,160 @@
+body{
+    background-color: #000;
+    color: #FFF;
+}
+    /* styles.css */
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+figure {
+  margin: 20px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+nav a:hover {
+  color: #23527c;
+}
+
+section {
+  margin-top: 20px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (min-width: 480px) {
+  
+  [data-testid="things-i-do"]{
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: inset 0 0 10px rgb(31, 8, 163);
+  transition: all 0.4s ease-in-out;
+}
+}
+@media (min-width: 768px) {
+  article {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  figure {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  article {
+    padding: 40px;
+  }
+  figure {
+    margin: 0 40px 0 0;
+  }
+}
+
+[data-testid="test-user-avatar"]{
+    color: #337ab7;
+    background-color: green;
+}
+
+[data-testid="test-profile-card"]{
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+[aria-label="User Name"]{
+    background-color: #337ab7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+[aria-label="User Avatar"]{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 200;
+}
+
+[data-testid="flexed-d"]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+[data-testid="flexed-d"] img{
+  width: 30px;
+  height: 30px;
+  padding: .10rem;
+  border-radius: 50px;
+  margin-top: var(--ltrwmpfb-20);
+  transition: 3s ease;
+}
+[aria-label="Social Links"]{
+  padding-top: 10px;
+}
+
+[data-testid="things-i-do"]{
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: inset 0 0 10px gold;
+  transition: all 0.4s ease-in-out;
+}
+[data-testid="things-i-do"]:hover{
+ transform: scale(1.02);
+ box-shadow: 0 0 20px gold;
+}
+
+[data-testid="things-i-do"] h3{
+    color: gold;
+}
+
+
+[data-testid="things-i-do"] li{
+  font-family: monospace;
+  list-style: circle;
+ justify-content: center;
+}
+
+[data-testid="test-footer"]{
+  text-align: center;
+}

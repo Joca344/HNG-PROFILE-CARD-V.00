@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article data-testid="test-profile-card">
+    <header>
+      <h2 data-testid="test-user-name" aria-label="User Name">Chidera's Profile Card</h2>
+    </header>
+    <figure>
+      <img data-testid="test-user-avatar" src="https://progressive-lavender-wbxdbggsn8.edgeone.app/IMG-20251004-WA0015.jpg">                               
+      <figcaption aria-label="User Avatar">Opara Chidera</figcaption>
+    </figure>
+    <p data-testid="test-user-bio" aria-label="User Bio">A frontend developer that likes solving problems</p>
+
+    <section data-testid="flexed-d">
+    <time data-testid="test-user-time" aria-label="Current Time"></time>
+    <nav data-testid="test-user-social-links" aria-label="Social Links">
+      <ul>
+        <li><a data-testid="test-user-social-instagram.com" href="https://instagram.com.com" target="_blank" rel="noopener noreferrer"><img src="https://soviet-scarlet-euyxpnpozj.edgeone.app/instagram%20icon.png" alt="instagram-icon"></a></li>
+        <li><a data-testid="test-user-social-facebook" href="https:  "></a>                                                                     
+        <li><a data-testid="test-user-social-facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="https://creative-yellow-wgqeezd6dg.edgeone.app/facebook%20icon.png" alt="Facebook-logo"></a></li>
+      </ul>
+    </nav>
+    </section>
+
+    <section data-testid="things-i-do">
+    <section data-testid="test-user-hobbies" aria-label="Hobbies">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Hiking</li>
+        <li>Reading</li>
+        <li>Coding</li>
+      </ul>
+    </section>
+    <section data-testid="test-user-dislikes" aria-label="Dislikes">
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Bugs</li>
+        <li>Errors</li>
+        <li>Github</li>
+      </ul>
+    </section>
+    </section>
+  </article>
+
+  <footer data-testid="test-footer">
+    <p>2025 Chidera profile Card. All rights reserved</p>
+  </footer>
+
+  <script>
+    // script.js
+
+const timeElement = document.querySelector('[data-testid="test-user-time"]');
+
+timeElement.textContent = Date.now();
+
+// Update time every second
+setInterval(() => {
+  timeElement.textContent = Date.now();
+}, 1000);
+
+// Avatar upload functionality
+
+const avatarElement = document.querySelector('[data-testid="test-user-avatar"]');
+const avatarInput = document.createElement('input');
+avatarInput.type = 'file';
+avatarInput.accept = 'image/*';
+avatarInput.style.display = 'none';
+document.body.appendChild(avatarInput);
+
+avatarElement.addEventListener('click', () => {
+  avatarInput.click();
+});
+
+avatarInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+  reader.onload = () => {
+    avatarElement.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+});
+  </script>
+</body>
+</html>
